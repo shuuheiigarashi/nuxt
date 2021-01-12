@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>userid</p>
     <!-- <p>/users/_id.vue</p> -->
     <p>User ID: {{userId}}</p>
   </div>
