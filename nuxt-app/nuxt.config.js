@@ -9,13 +9,17 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
+  loading: { color: "#3B8070" },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ["~/plugins/axios.js"],
 
+  env: {
+    QIITA_TOKEN: process.env.QIITA_TOKEN
+  },
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
@@ -27,6 +31,5 @@ export default {
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
-  loading: { color: "#3B8070" }
+  build: {}
 };
