@@ -1,7 +1,6 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
+  <div>
+    <!-- <Logo />
       <h1 class="title">nuxt-app</h1>
       <div class="links">
         <a
@@ -17,7 +16,7 @@
           class="button--grey"
         >GitHub</a>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -27,7 +26,7 @@ export default {
     console.log(
       JSON.stringify(
         await this.$axios.$get(
-          "https://qiita.com/api/v2/item?query=tag:nuxt.js"
+          "https://qiita.com/api/v2/items?query=tag:nuxt.js"
         ),
         true,
         ""
