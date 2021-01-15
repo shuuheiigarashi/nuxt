@@ -8,7 +8,7 @@
             <span>{{item.title}}</span>
             <small>
               <span>by</span>
-              <nuxt-link :to="'/users/${{item.user.id}}'">{{item.user.id}}</nuxt-link>
+              <nuxt-link :to="`/users/${item.user.id}`">{{item.user.id}}</nuxt-link>
             </small>
           </h4>
           <div>{{item.body.slice(0,130)}}.....</div>
