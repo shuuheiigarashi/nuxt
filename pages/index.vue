@@ -1,28 +1,30 @@
 <template>
-  <h1>Nuxt3 Jamstack Blogs</h1>
-  <ul>
-    <li v-for="blog in data?.contents" :key="blog.id">
-      <NuxtLink :to="`/${blog.id}`">
-        <img
-          :src="blog.eyecatch?.url"
-          :width="blog.eyecatch?.width"
-          :height="blog.eyecatch?.height"
-          alt=""
-        />
-        <div>
+  <div class="w-screen h-screen bg-blue-500">
+    <h1>Nuxt3 Jamstack Blogs</h1>
+    <ul>
+      <li v-for="blog in data?.contents" :key="blog.id">
+        <NuxtLink :to="`/${blog.id}`">
+          <img
+            :src="blog.eyecatch?.url"
+            :width="blog.eyecatch?.width"
+            :height="blog.eyecatch?.height"
+            alt=""
+          />
           <div>
-            {{ blog.category?.name }}
+            <div>
+              {{ blog.category?.name }}
+            </div>
+            <div>
+              {{ blog.title }}
+            </div>
+            <div>
+              {{ blog.publishedAt ?? blog.createdAt }}
+            </div>
           </div>
-          <div>
-            {{ blog.title }}
-          </div>
-          <div>
-            {{ blog.publishedAt ?? blog.createdAt }}
-          </div>
-        </div>
-      </NuxtLink>
-    </li>
-  </ul>
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
 <script setup lang="ts">
 import type { Blog } from "../types/blog";

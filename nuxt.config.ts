@@ -6,4 +6,11 @@ export default defineNuxtConfig({
     apiKey: process.env.MICROCMS_API_KEY,
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
   },
+  css: ["./assets/css/style.css"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 });
