@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="flex items-center justify-between p-4 bg-gray-800 text-white">
-      <h1 class="text-4xl font-bold text-gray-800">My Blog</h1>
+      <h1 class="text-4xl font-bold">My Blog</h1>
       <nav>
         <ul class="flex space-x-4">
           <li>
