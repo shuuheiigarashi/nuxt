@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "dayjs": "^1.11.10",
     "nuxt": "^3.10.3",
     "nuxt-microcms-module": "^3.0.2",
     "vue": "^3.4.21",

@@ -24,7 +24,7 @@
               {{ blog.title }}
             </div>
             <div>
-              {{ blog.publishedAt ?? blog.createdAt }}
+              {{ dateFormat(blog.publishedAt ?? blog.createdAt) }}
             </div>
           </div>
         </NuxtLink>
@@ -33,6 +33,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import { dateFormat } from "../utils/dateFormat";
 import type { Blog } from "../types/blog";
 
 const { data } = await useMicroCMSGetList<Blog>({

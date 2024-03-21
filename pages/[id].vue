@@ -3,7 +3,14 @@
     <h1>
       {{ data.title }}
     </h1>
+    <div
+      v-if="!data.eyecatch"
+      class="w-48 h-36 bg-gray-500 text-white flex items-center justify-center"
+    >
+      No Image
+    </div>
     <img
+      v-else
       :src="data.eyecatch?.url"
       :width="data.eyecatch?.width"
       :height="data.eyecatch?.height"
@@ -14,10 +21,10 @@
         {{ data.category?.name }}
       </div>
       <div>
-        {{ data.publishedAt ?? data.createdAt }}
+        {{ dateFormat(data.publishedAt ?? data.createdAt) }}
       </div>
     </div>
-    <div v-html="data.content"></div>
+    <div v-html="data.body"></div>
   </template>
 </template>
 <script setup lang="ts">
