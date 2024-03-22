@@ -18,7 +18,9 @@
           />
           <div>
             <div>
-              {{ blog.category?.name }}
+              <NuxtLink :to="`/category/${blog.category?.id}`">
+                {{ blog.category?.name }}
+              </NuxtLink>
             </div>
             <div>
               {{ blog.title }}
